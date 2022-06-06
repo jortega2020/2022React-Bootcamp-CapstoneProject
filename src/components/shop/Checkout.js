@@ -1,0 +1,10 @@
+import React from 'react'
+
+export const Checkout = () => {
+    return (
+        <div>
+            <h1>Checkout Page</h1>
+            <hr />
+        </div>
+    )
+}
