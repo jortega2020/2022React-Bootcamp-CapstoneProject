@@ -1,28 +1,14 @@
-import logo from './logo.svg';
+import { AppRouter } from './routers/AppRouter';
+import { Container } from './styles/grid';
+import { FooterSection } from './components/UI/Footer';
 import './App.css';
-import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
 
 function App() {
-  const { data, isLoading } = useFeaturedBanners();
-  console.log(data, isLoading);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <AppRouter />
+      <FooterSection />
+    </Container>
   );
 }
 
