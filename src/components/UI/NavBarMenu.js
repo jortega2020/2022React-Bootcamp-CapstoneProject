@@ -13,6 +13,9 @@ export const NavBarMenu = () => {
             src="/logo-icon3.png"
             alt="logo"
           />
+          <div>
+            Capstone Project
+          </div>
         </div>
         <div className="item search right">
           <div className="search-group">

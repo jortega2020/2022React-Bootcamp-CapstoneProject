@@ -40,7 +40,6 @@ const SideBar = styled.div`
 
 const ContentBox = styled.div`
   display: flex;
-  gap: 0.25rem;
   padding: 0.25rem;
   align-items: center;
   grid-area: content;
@@ -49,16 +48,27 @@ const ContentBox = styled.div`
     flex-direction: column;
   }
 `;
-const Content1 = styled.div`
+
+const ContentGrid = styled.div`
+  display: Grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+`;
+
+const Content = styled.div`
   padding: 0.25rem;
   width: 100%;
   height: 100%;
 `;
-const Content2 = styled(Content1)``;
-const Content3 = styled(Content1)``;
+
+
 const Footer = styled.footer`
   grid-area: footer;
   padding: 0.25rem;
 `;
 
-export { Container, NavBar, Main, SideBar, ContentBox, Content1, Content2, Content3, Footer };
+export { Container, NavBar, Main, SideBar, ContentBox, ContentGrid, Content, Footer };
